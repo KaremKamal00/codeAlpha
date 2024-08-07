@@ -5,6 +5,7 @@ import reservationRouter from "./modules/reservation/reservation.router.js"
 import tableRouter from "./modules/table/table.router.js"
 import inventoryRouter from "./modules/inventory/inventory.router.js"
 import orderRouter from "./modules/order/order.router.js"
+import salesRouter from "./modules/report/report.router.js"
 import { globalError } from "./utils/errorHandling.js";
 
 function bootstrap(app, express) {
@@ -17,6 +18,7 @@ function bootstrap(app, express) {
   app.use('/table', tableRouter)
   app.use('/inventory', inventoryRouter)
   app.use('/order', orderRouter)
+  app.use('/report', salesRouter)
   // app.use('/event', eventRouter)
   // app.use('/registration', registrationRouter)
 
